@@ -1,0 +1,39 @@
+{
+    "type":"server_log",
+
+    "separate":["-",50],
+    "content":"requests",
+    "sleep":"randomly",
+    "path":["/","/login","/logout","/register","/home","/manage","/manage/dashboard/put/display","/manage/require/generated/"],
+    "method":["POST","GET","PUT"],
+
+    "data":
+    {
+        "timestamp":"[%Y-%m-%d %H:%M:%S %z]",
+        "start":
+        [
+            "Starting gunicorn 20.1.0",
+            "[22756] [INFO] Listening at: http://127.0.0.1:8000 (22756)",
+            "[22756] [INFO] Using worker: sync",
+            "[22767] [INFO] Booting worker with pid: 22767",
+            "[22756] [INFO] Handling signal: winch",
+            "[22756] [INFO] Handling signal: winch",
+            "[22756] [INFO] Handling signal: winch"
+        ],
+        "request":
+        [
+            "handling new request",
+            "url:",
+            "\n",
+            "Host: 127.0.0.1:8000",
+            "Content-Type: text/xml; charset=utf-8",
+            "Content-Length: length",
+            "Accept-Language: en-us",
+            "Connection: Keep-Alive",
+            "checked"
+        ]
+    }
+
+
+
+}
