@@ -29,7 +29,8 @@ def generate_fake_log(log_type):
             print(GetTimeStamp(log_data['data'])+i)
             time.sleep(0.01)
         
-        for k in range(100):
+        time.sleep(0.5)
+        while True:
             print(separate)
             for i in log_data['data']['request']:
                 if i!='url:':
