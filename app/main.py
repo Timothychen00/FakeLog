@@ -3,12 +3,13 @@ import json,datetime
 log_type='server_log'
 if len(sys.argv)==2:
     log_type=sys.argv[1]
+    
+limit=999
 
 def GetTimeStamp(format):
     if 'timestamp' in format:
         return datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=+8))).strftime(format['timestamp'])
-    else:
-        return ''
+    return ''
 
 
 def generate_fake_log(log_type):
@@ -30,7 +31,7 @@ def generate_fake_log(log_type):
             time.sleep(0.01)
         
         time.sleep(0.5)
-        while True:
+        for i in range(limit):
             print(separate)
             for i in log_data['data']['request']:
                 if i!='url:':
